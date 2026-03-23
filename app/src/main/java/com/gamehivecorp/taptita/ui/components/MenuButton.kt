@@ -38,7 +38,7 @@ fun MenuButton(
             .width(200.dp)
             .height(60.dp)
             .pressableWithCooldown(
-                cooldownMillis = 500L,
+                cooldownMillis = 1000L,
                 enabled = enabled,
                 onClick = onClick
             )
