@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/anna/AndroidStudioProjects/JackpotaPlay -maxdepth 2 -type f \\\\\\(-name .github -o -name *.yml -o -name *.yaml -o -name .gitlab-ci* -o -name Jenkinsfile -o -name .circleci \\\\\\))",
+      "Bash(ls -1 /Users/anna/AndroidStudioProjects/JackpotaPlay/app/src/main/res/mipmap-*/)",
+      "Bash(find /Users/anna/AndroidStudioProjects/JackpotaPlay/app/src/main/res/mipmap-* -type f)",
+      "Bash(./gradlew assembleDebug)",
+      "Read(//Users/anna/Library/Java/**)",
+      "Bash(/usr/libexec/java_home -V)",
+      "Bash(export JAVA_HOME=\"/Applications/Android Studio.app/Contents/jbr/Contents/Home\")"
+    ]
+  }
+}
