@@ -833,7 +833,7 @@ private fun GameBottomBar(
                     onBetPositioned(pos.x + it.size.width / 2f, pos.y + it.size.height / 2f)
                 }
             ) {
-                Text(text = "BET", color = Color.White.copy(alpha = 0.6f), fontSize = 11.sp, fontFamily = CasinoFont)
+                Text(text = "PLAY", color = Color.White.copy(alpha = 0.6f), fontSize = 11.sp, fontFamily = CasinoFont)
                 AnimatedBetText(bet = bet)
             }
             Spacer(modifier = Modifier.width(8.dp))
