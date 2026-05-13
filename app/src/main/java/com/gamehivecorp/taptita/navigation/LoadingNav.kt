@@ -5,6 +5,10 @@ import android.content.Intent
 import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -29,6 +33,15 @@ fun LoadingGraph() {
 
     val navController = rememberNavController()
     val context = LocalContext.current as LoadingActivity
+    var openedMain by rememberSaveable { mutableStateOf(false) }
+
+    fun openMainOnce() {
+        if (!openedMain) {
+            openedMain = true
+            context.startActivity(Intent(context, MainActivity::class.java))
+            context.finish()
+        }
+    }
 
     NavHost(
         navController = navController,
@@ -49,10 +62,10 @@ fun LoadingGraph() {
                 }
             }
 
-            val toStub = {
-                context.startActivity(Intent(context, MainActivity::class.java))
-                context.finish()
-            }
+//            val toStub = {
+//                context.startActivity(Intent(context, MainActivity::class.java))
+//                context.finish()
+//            }
 
             val internetCheck = {
                 context.isFlowersConnected()
@@ -65,7 +78,7 @@ fun LoadingGraph() {
                     val storage = StorageImpl.getInstance(context)
                     storage.putString(STUB_STORAGE_KEY, STUB_STORAGE_VALUE_TRUE)
                 }
-                toStub()
+                openMainOnce()
             }, toNoNet = toNoNet,
                 internetCheck)
 

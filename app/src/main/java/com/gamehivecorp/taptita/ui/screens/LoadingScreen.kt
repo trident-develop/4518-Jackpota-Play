@@ -170,7 +170,7 @@ fun LoadingScreen(onLoadingComplete: () -> Unit) {
         contentAlignment = Alignment.Center
     ) {
         Image(
-            painter = painterResource(R.drawable.royal_bg),
+            painter = painterResource(R.drawable.bg_1),
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
@@ -263,7 +263,7 @@ fun LoadingScreen(onLoadingComplete: () -> Unit) {
             Box(contentAlignment = Alignment.Center) {
                 // Glow layer behind text
                 Text(
-                    text = "JACKPOTA\nPLAY",
+                    text = "JACKPOT\nCITY",
                     color = Color(0xFFFFD700).copy(alpha = glowAlpha * 0.4f),
                     fontSize = 52.sp,
                     fontWeight = FontWeight.Bold,
@@ -279,7 +279,7 @@ fun LoadingScreen(onLoadingComplete: () -> Unit) {
                 )
                 // Main text
                 Text(
-                    text = "JACKPOTA\nPLAY",
+                    text = "JACKPOT\nCITY",
                     style = TextStyle(
                         shadow = Shadow(
                             color = Color(0xFFFFD700).copy(alpha = 0.8f),
