@@ -115,7 +115,7 @@ fun PrivacyScreen(onBack: () -> Unit) {
                                     return false
                                 }
                             }
-                            loadUrl("https://telegra.ph/Privacy-Policy-for-Jackpota-Play-03-20")
+                            loadUrl("https://telegra.ph/Privacy-Policy-for-Jackpot-City-05-13")
                         }
                         addView(
                             webView, FrameLayout.LayoutParams(
