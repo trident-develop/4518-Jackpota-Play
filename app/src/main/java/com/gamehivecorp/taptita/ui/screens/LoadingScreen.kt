@@ -263,7 +263,7 @@ fun LoadingScreen(onLoadingComplete: () -> Unit) {
             Box(contentAlignment = Alignment.Center) {
                 // Glow layer behind text
                 Text(
-                    text = "JACKPOT\nCITY",
+                    text = "Jackapota\nCity",
                     color = Color(0xFFFFD700).copy(alpha = glowAlpha * 0.4f),
                     fontSize = 52.sp,
                     fontWeight = FontWeight.Bold,
@@ -279,7 +279,7 @@ fun LoadingScreen(onLoadingComplete: () -> Unit) {
                 )
                 // Main text
                 Text(
-                    text = "JACKPOT\nCITY",
+                    text = "Jackapota\nCity",
                     style = TextStyle(
                         shadow = Shadow(
                             color = Color(0xFFFFD700).copy(alpha = 0.8f),
@@ -288,7 +288,7 @@ fun LoadingScreen(onLoadingComplete: () -> Unit) {
                         )
                     ),
                     color = Color(0xFFFFD700),
-                    fontSize = 52.sp,
+                    fontSize = 46.sp,
                     fontWeight = FontWeight.Bold,
                     fontFamily = casinoFont,
                     textAlign = TextAlign.Center,
